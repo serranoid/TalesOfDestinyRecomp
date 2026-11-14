@@ -12,11 +12,16 @@
   },
   "project": "Tales of Destiny Recompiled",
   "status": "in-progress",
-  "targets": ["Linux"],
+  "targets": [
+    "Linux"
+  ],
   "toolchain": "Psxrecomp",
   "approach": "Static recompilation with psxrecomp (R3000A to C, LLE OpenBIOS)",
   "maintainers": [
-    { "name": "serranoid", "link": "https://github.com/serranoid" }
+    {
+      "name": "serranoid",
+      "link": "https://github.com/serranoid"
+    }
   ],
   "help": [
     "Menu input: injected pad presses reach the game (Start opens the menu) but confirm does not register",
@@ -24,5 +29,12 @@
     "FMV: six .STR files, three MDEC bitstream versions, unverified",
     "Overlays: KAISEN.BIN and TKM.BIN (minigames) are not recompiled yet"
   ],
-  "notes": "Boots to the title screen and the main menu, verified headless with screenshots and guest registers (software renderer, no GPU). 4,360 guest functions compiled from the 1.15 MB boot EXE; 58 fps at 16.6 ms/frame. Not yet playable: see help."
+  "notes": "Boots to the title screen and the main menu, verified headless with screenshots and guest registers (software renderer, no GPU). 4,360 guest functions compiled from the 1.15 MB boot EXE; 58 fps at 16.6 ms/frame. Not yet playable: see help.",
+  "started": "2026-11-14",
+  "tags": [
+    "tales",
+    "namco",
+    "rpg",
+    "psxrecomp"
+  ]
 }
