@@ -18,7 +18,8 @@ Nothing from the game is distributed here. You need your own disc.
 | Main menu (*NEW GAME / CONTINUE / CUSTOM / Sound Test*) | **yes** |
 | *NEW GAME* → name entry screen | **yes** |
 | Opening scene through to the first room where the player has control | **yes** |
-| Battles, save/load | not yet |
+| Battles | **yes**, by hand: about 20 minutes of windowed play with a gamepad, 5–6 battles, no fault seen. Not yet covered by a replay |
+| Save/load | not yet |
 | The two minigame overlays | not yet (skipped) |
 | Audio (XA voice, 94 SEQ tracks over VAB) | produced through the opening, not yet listened to |
 | Full-motion video (six streams, three MDEC bitstream versions) | the opening movie decodes; the rest unverified |
@@ -108,8 +109,8 @@ the original game is playable. See [ROADMAP.md](ROADMAP.md).
 
 ## Help wanted
 
-See `help` in [`.recomp.json`](.recomp.json). Short version: the first
-battle, save and load, audio, FMV, and the two overlays. [CONTRIBUTING.md](CONTRIBUTING.md)
+See `help` in [`.recomp.json`](.recomp.json). Short version: a replay
+that reaches the first battle, save and load, audio, FMV, and the two overlays. [CONTRIBUTING.md](CONTRIBUTING.md)
 explains how changes are verified and what must never be uploaded.
 
 ## Legal
