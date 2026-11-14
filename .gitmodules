@@ -1,0 +1,6 @@
+[submodule "psxrecomp"]
+	path = psxrecomp
+	url = https://github.com/RetroPortingToolKit/psxrecomp.git
+[submodule "reference"]
+	path = reference
+	url = https://github.com/vs-sr-dev/ps1-talesofdestiny-doc.git

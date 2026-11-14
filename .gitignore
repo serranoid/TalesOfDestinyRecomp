@@ -1,0 +1,21 @@
+# --- datos del juego: nunca entran al repo ---
+disc/
+disc-jp/
+*.bin
+*.cue
+*.7z
+license_data.dat
+*.iso
+
+# --- artefactos de build / código generado ---
+build/
+build-*/
+generated/
+
+# --- salidas locales ---
+shots/
+*.log
+disc
+disc-jp
+tod-jp.xml
+psx_last_run_report.json

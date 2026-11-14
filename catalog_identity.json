@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Tales of Destiny",
+    "id": "SLPS-01100",
+    "boot_exe": "SLPS_011.00"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "",
+    "players": 2
+  },
+  "rom_identity": {
+    "cue_name": "Tales of Destiny (Japan).cue",
+    "bin_name": "Tales of Destiny (Japan) (Track 1).bin",
+    "track_counts": [
+      2
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 518719488,
+      "md5": "816721cd3224c98f89306b06c06c846c",
+      "sha1": "eb1c41fcb44e5fbc85da7d92f1e2889b69f299f5",
+      "crc32": "2e8deca1"
+    },
+    "disc_fp": "5f4679bf228ade81b0ead45e884c531152e832250896b844d25dde90ebb43684"
+  },
+  "exe": {
+    "load_address": "0x800A0000",
+    "entry_pc": "0x80151010",
+    "text_size": "0x00119800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1568,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

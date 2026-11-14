@@ -1,0 +1,28 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Tales of Destiny",
+  "wikidata": "Q336100",
+  "system": "PS1",
+  "type": "recomp",
+  "original": {
+    "region": "Japan",
+    "revision": "1.0",
+    "serial": "SLPS-01100",
+    "sha1": "eb1c41fcb44e5fbc85da7d92f1e2889b69f299f5"
+  },
+  "project": "Tales of Destiny Recompiled",
+  "status": "in-progress",
+  "targets": ["Linux"],
+  "toolchain": "Psxrecomp",
+  "approach": "Static recompilation with psxrecomp (R3000A to C, LLE OpenBIOS)",
+  "maintainers": [
+    { "name": "serranoid", "link": "https://github.com/serranoid" }
+  ],
+  "help": [
+    "Menu input: injected pad presses reach the game (Start opens the menu) but confirm does not register",
+    "Audio: XA 37.8 kHz voice and 94 SEQ tracks over VAB banks, unverified",
+    "FMV: six .STR files, three MDEC bitstream versions, unverified",
+    "Overlays: KAISEN.BIN and TKM.BIN (minigames) are not recompiled yet"
+  ],
+  "notes": "Boots to the title screen and the main menu, verified headless with screenshots and guest registers (software renderer, no GPU). 4,360 guest functions compiled from the 1.15 MB boot EXE; 58 fps at 16.6 ms/frame. Not yet playable: see help."
+}
