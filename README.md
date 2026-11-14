@@ -24,14 +24,14 @@ Nothing from the game is distributed here. You need your own disc.
 
 Verified headless with the runtime's debug server (`get_registers`, `screenshot_file`,
 `latency`) on a software renderer: guest `sp=0x801FFF10`, frame period 16.6 ms
-(p95 17.6 ms) ≈ 58 fps.
+(p95 17.6 ms) ≈ 60 fps.
 
 ## Numbers
 
 | | |
 |---|---|
 | Boot EXE | 1,155,072 bytes, `0x800A0000`, entry `0x80151010` |
-| Recompiled | 1,567 JAL seeds → **4,360 functions**, 293 shards, 15.5 M lines of C — 30 s |
+| Recompiled | 1,567 JAL seeds → **4,360 dispatch entries**, 293 shards, 15.5 M lines of C — 30 s |
 | Built | 867 targets, 57.8 MB executable — 3.5 min at `-j8` |
 | Disc it was measured against | track 1 `sha1 eb1c41fc…`, 518,719,488 bytes |
 
