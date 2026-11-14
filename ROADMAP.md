@@ -22,7 +22,7 @@ Enhancements on top of a game that cannot be played are not measurable.
 - [x] Opening scene, first room with player control
 - [x] First battle (played by hand: 5–6 battles in a 20-minute session; no replay covers it yet)
 - [ ] Save to memory card and load it back
-- [ ] Audio (voice and music) verified, not assumed
+- [x] Audio (voice and music) verified, not assumed (by ear, opening ship and its battles; no measurement)
 - [ ] Full-motion video
 - [ ] The two minigame overlays
 - [ ] A replay that drives the game from boot through each milestone and fails when

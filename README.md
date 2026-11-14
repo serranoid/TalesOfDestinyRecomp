@@ -21,7 +21,7 @@ Nothing from the game is distributed here. You need your own disc.
 | Battles | **yes**, by hand: about 20 minutes of windowed play with a gamepad, 5–6 battles, no fault seen. Not yet covered by a replay |
 | Save/load | not yet |
 | The two minigame overlays | not yet (skipped) |
-| Audio (XA voice, 94 SEQ tracks over VAB) | produced through the opening, not yet listened to |
+| Audio (XA voice, 94 SEQ tracks over VAB) | **yes**, by ear: music and sound through the opening ship and its battles, no fault heard. Not measured |
 | Full-motion video (six streams, three MDEC bitstream versions) | the opening movie decodes; the rest unverified |
 
 ![Main menu](evidence/02-menu.png) ![Name entry](evidence/04-name-entry.png) ![First control](evidence/05-first-control.png)
@@ -110,7 +110,7 @@ the original game is playable. See [ROADMAP.md](ROADMAP.md).
 ## Help wanted
 
 See `help` in [`.recomp.json`](.recomp.json). Short version: a replay
-that reaches the first battle, save and load, audio, FMV, and the two overlays. [CONTRIBUTING.md](CONTRIBUTING.md)
+that reaches the first battle, save and load, FMV, and the two overlays. [CONTRIBUTING.md](CONTRIBUTING.md)
 explains how changes are verified and what must never be uploaded.
 
 ## Legal
