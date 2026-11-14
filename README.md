@@ -15,9 +15,9 @@ Nothing from the game is distributed here. You need your own disc.
 | Title screen | **yes** |
 | Main menu (*NEW GAME / CONTINUE / CUSTOM / Sound Test*) | **yes** |
 | Into the game, battles, save/load | not yet |
-| Minigame overlays (`KAISEN.BIN`, `TKM.BIN`) | not yet (skipped) |
+| The two minigame overlays | not yet (skipped) |
 | Audio (XA voice, 94 SEQ tracks over VAB) | unverified |
-| FMV (six `.STR`, three MDEC bitstream versions) | unverified |
+| Full-motion video (six streams, three MDEC bitstream versions) | unverified |
 
 ![Title screen](evidence/01-title.png) ![Main menu](evidence/02-menu.png)
 
