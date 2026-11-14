@@ -69,6 +69,15 @@ PSX_DEBUG_SERVER=1 ./build/psx_runtime --game game.toml \
 
 Set `PSX_RECOMP_UI=OFF` until a launcher UI is wired; the runtime needs SDL3 3.4+.
 
+Drop `--headless` to play in a window. Without the launcher, player 1 is the keyboard
+(`Enter` = Start, `S` = ○, `X` = ×, `A` = △, `Z` = □). To play with a gamepad, add
+this to `game.toml` (checked with an Xbox Wireless Controller; confirm is **B**):
+
+```toml
+[controller]
+p1_device = "auto"
+```
+
 ## How it is verified
 
 No window, no GPU. The runtime exposes a JSON-over-TCP debug server on `127.0.0.1:4370`:
