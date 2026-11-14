@@ -24,12 +24,11 @@
     }
   ],
   "help": [
-    "Menu confirm input: injected pad presses reach the game (Start opens the menu) but confirm does not register",
     "Audio: streamed voice and sequenced music over instrument banks, unverified",
     "Full-motion video playback, unverified",
     "The two minigame overlays are skipped for now"
   ],
-  "notes": "Boots to the title screen and the main menu, verified headless with screenshots and guest registers (software renderer, no GPU). 4,360 guest functions compiled from the game's 1.15 MB boot code; 58 fps at 16.6 ms/frame. Not yet playable: see help.",
+  "notes": "Boots to the title screen and the main menu, and NEW GAME reaches the name entry screen, verified headless with screenshots and guest registers (software renderer, no GPU). 4,360 guest functions compiled from the game's 1.15 MB boot code; 58 fps at 16.6 ms/frame. Not yet playable: see help.",
   "started": "2026-11-14",
   "tags": [
     "tales",

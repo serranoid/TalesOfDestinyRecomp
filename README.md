@@ -14,12 +14,13 @@ Nothing from the game is distributed here. You need your own disc.
 | Recompiles and boots (LLE OpenBIOS) | **yes** |
 | Title screen | **yes** |
 | Main menu (*NEW GAME / CONTINUE / CUSTOM / Sound Test*) | **yes** |
-| Into the game, battles, save/load | not yet |
+| *NEW GAME* → name entry screen | **yes** |
+| Past name entry: into the game, battles, save/load | not yet |
 | The two minigame overlays | not yet (skipped) |
 | Audio (XA voice, 94 SEQ tracks over VAB) | unverified |
 | Full-motion video (six streams, three MDEC bitstream versions) | unverified |
 
-![Title screen](evidence/01-title.png) ![Main menu](evidence/02-menu.png)
+![Title screen](evidence/01-title.png) ![Main menu](evidence/02-menu.png) ![Name entry](evidence/04-name-entry.png)
 
 Verified headless with the runtime's debug server (`get_registers`, `screenshot_file`,
 `latency`) on a software renderer: guest `sp=0x801FFF10`, frame period 16.6 ms
@@ -75,14 +76,16 @@ No window, no GPU. The runtime exposes a JSON-over-TCP debug server on `127.0.0.
 {"id":4,"cmd":"press","buttons":"0xFFF7","frames":90}
 ```
 
+`buttons` is the raw active-low pad word: `Start` = `0xFFF7`, `○` (confirm) = `0xDFFF`,
+`×` (cancel) = `0xBFFF`. The server closes the connection after each reply.
+
 A milestone is done when a screenshot and the guest registers say so — not when it
 compiles.
 
 ## Help wanted
 
-See `help` in [`.recomp.json`](.recomp.json). Short version: **menu confirm input**
-(`Start` opens the menu, but `○`/`×` held do not enter `NEW GAME`), audio, FMV, and the
-two overlays.
+See `help` in [`.recomp.json`](.recomp.json). Short version: audio, FMV, and the two
+overlays.
 
 ## Legal
 
