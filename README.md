@@ -4,8 +4,9 @@ A **static recompilation of *Tales of Destiny*** (PlayStation, Japan, `SLPS-0110
 built on [psxrecomp](https://github.com/RetroPortingToolKit/psxrecomp). The game's MIPS
 R3000A code is translated to C ahead of time and compiled into a native executable.
 The framework keeps an interpreter for code that changes at run time; measured from
-boot to the name entry screen, it ran **9 instructions of game code** (three small
-blocks the game patches in memory). Everything else ran recompiled.
+boot through the whole opening scene to the first controllable room (about 27,000
+frames), it ran **9 instructions of game code** (three small blocks the game patches
+in memory). Everything else ran recompiled, with no dispatch miss.
 
 Nothing from the game is distributed here. You need your own disc.
 
@@ -17,12 +18,13 @@ Nothing from the game is distributed here. You need your own disc.
 | Title screen | **yes** |
 | Main menu (*NEW GAME / CONTINUE / CUSTOM / Sound Test*) | **yes** |
 | *NEW GAME* → name entry screen | **yes** |
-| Past name entry: into the game, battles, save/load | not yet |
+| Opening scene through to the first room where the player has control | **yes** |
+| Battles, save/load | not yet |
 | The two minigame overlays | not yet (skipped) |
-| Audio (XA voice, 94 SEQ tracks over VAB) | unverified |
+| Audio (XA voice, 94 SEQ tracks over VAB) | produced through the opening, not yet listened to |
 | Full-motion video (six streams, three MDEC bitstream versions) | unverified |
 
-![Title screen](evidence/01-title.png) ![Main menu](evidence/02-menu.png) ![Name entry](evidence/04-name-entry.png)
+![Title screen](evidence/01-title.png) ![Main menu](evidence/02-menu.png) ![Name entry](evidence/04-name-entry.png) ![First control](evidence/05-first-control.png)
 
 Verified headless with the runtime's debug server (`get_registers`, `screenshot_file`,
 `latency`) on a software renderer: guest `sp=0x801FFF10`, frame period 16.6 ms
@@ -91,8 +93,8 @@ the original game is playable. See [ROADMAP.md](ROADMAP.md).
 
 ## Help wanted
 
-See `help` in [`.recomp.json`](.recomp.json). Short version: getting past the
-name entry screen, audio, FMV, and the two overlays. [CONTRIBUTING.md](CONTRIBUTING.md)
+See `help` in [`.recomp.json`](.recomp.json). Short version: the first
+battle, save and load, audio, FMV, and the two overlays. [CONTRIBUTING.md](CONTRIBUTING.md)
 explains how changes are verified and what must never be uploaded.
 
 ## Legal

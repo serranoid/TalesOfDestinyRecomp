@@ -24,11 +24,11 @@
     }
   ],
   "help": [
-    "Audio: streamed voice and sequenced music over instrument banks, unverified",
+    "Audio: output is produced through the opening but has not been listened to or compared with the original",
     "Full-motion video playback, unverified",
     "The two minigame overlays are skipped for now"
   ],
-  "notes": "Boots to the title screen and the main menu, and NEW GAME reaches the name entry screen, verified headless with screenshots and guest registers (software renderer, no GPU). 4,360 dispatch entries compiled from the game's 1.15 MB boot code; 16.6 ms/frame (about 60 fps). Not yet playable: see help.",
+  "notes": "Boots, plays the whole opening scene and reaches the first room where the player has control, verified headless with screenshots and guest registers (software renderer, no GPU). 4,360 dispatch entries compiled from the game's 1.15 MB boot code; 16.6 ms/frame (about 60 fps). Not yet playable: see help.",
   "started": "2026-11-14",
   "tags": [
     "tales",

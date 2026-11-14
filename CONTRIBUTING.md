@@ -1,7 +1,7 @@
 # Contributing
 
-Help is welcome. This is an early project: the game boots, reaches the main menu and
-enters *NEW GAME* up to the name entry screen. Everything after that is open ground.
+Help is welcome. This is an early project: the game boots, plays its opening scene and hands
+control to the player in the first room. Everything after that is open ground.
 
 ## The one hard rule: no game data
 
@@ -22,11 +22,10 @@ but say so in your report, because addresses can differ.
 
 The current list lives in `help` in [`.recomp.json`](.recomp.json). Today:
 
-- **Progress past the name entry screen**: opening scene, first map, first battle,
-  save and load.
-- **Audio**: streamed voice and sequenced music are unverified. The debug server lists
-  `audio_stats` and `audio_wav` commands; nobody has used them on this game yet, so a
-  first headless audio check would be a contribution in itself.
+- **Progress past the first room**: first battle, save and load.
+- **Audio**: `audio_stats` shows the sound chip producing output through the opening,
+  but nobody has listened to it or compared it with the original. A capture with
+  `audio_wav` checked against a reference would be a contribution in itself.
 - **Full-motion video**: unverified.
 - **The two minigame overlays**: code loaded from disc at run time, not recompiled yet.
 - **Other hosts**: only Linux x86-64 (GCC 16, CMake, Ninja, SDL3 3.4+) has been built

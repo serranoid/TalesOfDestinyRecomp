@@ -2,7 +2,8 @@
 
 Where this project is going, in the order it will be attempted. Each goal has a
 "done when" that can be checked; nothing here is finished until that check passes on
-a real run. Status today: boots, main menu, *NEW GAME* up to the name entry screen.
+a real run. Status today: boots, plays the opening scene and reaches the first room where the
+player has control.
 
 The four goals that define the project:
 
@@ -18,7 +19,8 @@ They all sit on top of a baseline that does not exist yet, so that comes first.
 Enhancements on top of a game that cannot be played are not measurable.
 
 - [x] Boot, title, main menu, name entry
-- [ ] Opening scene, first map, first battle
+- [x] Opening scene, first room with player control
+- [ ] First battle
 - [ ] Save to memory card and load it back
 - [ ] Audio (voice and music) verified, not assumed
 - [ ] Full-motion video
