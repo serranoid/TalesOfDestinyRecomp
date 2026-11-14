@@ -121,7 +121,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--port", type=int, default=4372)
     ap.add_argument("--disc", default=os.environ.get("TOD_DISC") or os.path.join(
-        ROOT, "..", "discs", "tod-jp", "Tales of Destiny (Japan).cue"))
+        ROOT, "..", "isos", "Tales of Destiny (USA)", "Tales of Destiny (USA).cue"))
     ap.add_argument("--out", default=os.path.join(tempfile.gettempdir(), "tod-replay"))
     a = ap.parse_args()
     exe, disc, out = os.path.join(ROOT, "build", "psx_runtime"), os.path.abspath(a.disc), os.path.abspath(a.out)

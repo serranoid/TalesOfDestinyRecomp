@@ -92,9 +92,10 @@ Delivered as a mod, so it depends on goal 2.
 
 **Done when** the opening hour is playable in Spanish with no overflowing text boxes.
 
-Open question, not decided: this project targets the Japanese release. Whether the
-translation starts from the Japanese text engine or needs changes to it for Latin
-text is unknown until the first item above is done.
+The project moved from the Japanese release to the North American one for this goal:
+the translation starts from English text and an engine that already draws Latin
+letters. Whether that engine can draw the accented characters as it is, is unknown
+until the first item above is done.
 
 ## How to help
 

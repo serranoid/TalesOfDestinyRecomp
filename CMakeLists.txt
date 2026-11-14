@@ -1,4 +1,7 @@
-# Tales of Destiny (PS1, SLPS-01100) — static recompilation on psxrecomp.
+cmake_minimum_required(VERSION 3.20)
+project(tod-recomp C CXX)
+
+# Tales of Destiny (PS1, SLUS-00626) — static recompilation on psxrecomp.
 #
 # The framework is pinned as a submodule at ./psxrecomp. For local development
 # against a shared checkout, override it:
@@ -17,6 +20,6 @@ set(PSXRECOMP_ROOT "${PSXRECOMP_ROOT}" CACHE PATH "Path to the psxrecomp framewo
 include("${PSXRECOMP_ROOT}/runtime/runtime.cmake")
 
 psxrecomp_add_game_runtime(psx-runtime
-    GEN_MARKER    "generated/SLPS_011.00_dispatch.c"
-    GEN_FULL_GLOB "generated/SLPS_011.00_full_*.c"
+    GEN_MARKER    "generated/SLUS_006.26_dispatch.c"
+    GEN_FULL_GLOB "generated/SLUS_006.26_full_*.c"
 )

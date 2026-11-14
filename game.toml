@@ -2,12 +2,12 @@
 # https://github.com/nstse/psxrecomp
 
 [game]
-name = "Tales of Destiny (Japan)"
-id = "SLPS-01100"
-exe = "disc/SLPS_011.00"
+name = "Tales of Destiny (USA)"
+id = "SLUS-00626"
+exe = "disc/SLUS_006.26"
 load_address = "0x800A0000"
-entry_pc = "0x80151010"
-text_size = "0x11A000"
+entry_pc = "0x8014E8B4"
+text_size = "0x115000"
 stack_base = "0x801FFFF0"
 
 [recompiler]
@@ -18,7 +18,7 @@ bios_config = "psxrecomp/bios/OpenBIOS.toml"
 
 [runtime]
 # debug_port = 4370
-window_title = "Tales of Destiny (Japan) Recompiled"
+window_title = "Tales of Destiny (USA) Recompiled"
 bios_hle = false
 
 [video]

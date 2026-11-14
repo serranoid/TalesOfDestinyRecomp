@@ -5,10 +5,10 @@
   "system": "PS1",
   "type": "recomp",
   "original": {
-    "region": "Japan",
+    "region": "USA",
     "revision": "1.0",
-    "serial": "SLPS-01100",
-    "sha1": "eb1c41fcb44e5fbc85da7d92f1e2889b69f299f5"
+    "serial": "SLUS-00626",
+    "sha1": "d0d6d150b3b8abb53e0380cb328fbabef4d19c28"
   },
   "project": "Tales of Destiny Recompiled",
   "status": "in-progress",
@@ -25,10 +25,10 @@
   ],
   "help": [
     "Audio: output is produced through the opening but has not been listened to or compared with the original",
-    "Full-motion video playback, unverified",
+    "Full-motion video: the opening movie decodes, the rest is unverified",
     "The two minigame overlays are skipped for now"
   ],
-  "notes": "Boots, plays the whole opening scene and reaches the first room where the player has control, verified headless with screenshots and guest registers (software renderer, no GPU). 4,360 dispatch entries compiled from the game's 1.15 MB boot code; 16.6 ms/frame (about 60 fps). Not yet playable: see help.",
+  "notes": "Boots, plays the whole opening scene and reaches the first room where the player has control, verified headless with screenshots and interpreter statistics, and in a window on OpenGL at 16.7 ms/frame (60 fps). 4,579 dispatch entries compiled from the game's 1.13 MB boot code. Moved from the Japanese release (SLPS-01100) to the North American one as the base for a Spanish translation. Not yet playable: see help.",
   "started": "2026-11-14",
   "tags": [
     "tales",

@@ -1,10 +1,10 @@
 # Tales of Destiny Recompiled
 
-A **static recompilation of *Tales of Destiny*** (PlayStation, Japan, `SLPS-01100`, 1997)
+A **static recompilation of *Tales of Destiny*** (PlayStation, North America, `SLUS-00626`, 1998)
 built on [psxrecomp](https://github.com/RetroPortingToolKit/psxrecomp). The game's MIPS
 R3000A code is translated to C ahead of time and compiled into a native executable.
 The framework keeps an interpreter for code that changes at run time; measured from
-boot through the whole opening scene to the first controllable room (about 27,000
+boot through the whole opening scene to the first controllable room (about 30,000
 frames), it ran **9 instructions of game code** (three small blocks the game patches
 in memory). Everything else ran recompiled, with no dispatch miss.
 
@@ -15,31 +15,30 @@ Nothing from the game is distributed here. You need your own disc.
 | Milestone | State |
 |---|---|
 | Recompiles and boots (LLE OpenBIOS) | **yes** |
-| Title screen | **yes** |
 | Main menu (*NEW GAME / CONTINUE / CUSTOM / Sound Test*) | **yes** |
 | *NEW GAME* → name entry screen | **yes** |
 | Opening scene through to the first room where the player has control | **yes** |
 | Battles, save/load | not yet |
 | The two minigame overlays | not yet (skipped) |
 | Audio (XA voice, 94 SEQ tracks over VAB) | produced through the opening, not yet listened to |
-| Full-motion video (six streams, three MDEC bitstream versions) | unverified |
+| Full-motion video (six streams, three MDEC bitstream versions) | the opening movie decodes; the rest unverified |
 
-![Title screen](evidence/01-title.png) ![Main menu](evidence/02-menu.png) ![Name entry](evidence/04-name-entry.png) ![First control](evidence/05-first-control.png)
+![Main menu](evidence/02-menu.png) ![Name entry](evidence/04-name-entry.png) ![First control](evidence/05-first-control.png)
 
 Verified headless with the runtime's debug server (`get_registers`, `screenshot_file`,
-`latency`) on a software renderer: guest `sp=0x801FFF10`, frame period 16.6 ms
-(p95 17.6 ms) ≈ 60 fps.
+`dirty_ram_stats`) and in a window on OpenGL, where `latency` reports a frame period
+of 16.68 ms (p95 16.69 ms), 60 fps, with no audio underrun.
 
 ## Numbers
 
 | | |
 |---|---|
-| Boot EXE | 1,155,072 bytes, `0x800A0000`, entry `0x80151010` |
-| Recompiled | 1,567 JAL seeds → **4,360 dispatch entries**, 293 shards, 15.5 M lines of C — 30 s |
-| Built | 867 targets, 57.8 MB executable — 3.5 min at `-j8` |
-| Disc it was measured against | track 1 `sha1 eb1c41fc…`, 518,719,488 bytes |
+| Boot EXE | 1,134,592 bytes, `0x800A0000`, entry `0x8014E8B4` |
+| Recompiled | 1,541 JAL seeds → **4,579 dispatch entries**, 242 shards, 11.2 M lines of C — 2.4 s |
+| Built | 765 targets, 45.5 MB executable — 58 s at `-j8` (12-thread desktop) |
+| Disc it was measured against | track 1 `sha1 d0d6d150…`, 557,790,912 bytes |
 
-`generated/` is **not committed**: it is a 426 MB build artifact that takes 30 s to
+`generated/` is **not committed**: it is a 304 MB build artifact that takes seconds to
 regenerate. This is a source-development project for now.
 
 ## Build
@@ -49,12 +48,12 @@ git clone --recurse-submodules https://github.com/serranoid/TalesOfDestinyRecomp
 cd TalesOfDestinyRecomp
 
 # 1. Your own disc image (bin/cue). This extracts the boot EXE into disc/.
-tools/prepare.sh "/path/to/Tales of Destiny (Japan).cue"
+tools/prepare.sh "/path/to/Tales of Destiny (USA).cue"
 
 # 2. Recompiler + BIOS backends (once)
 sh psxrecomp/tools/setup_dev.sh
 
-# 3. Generated C (30 s)
+# 3. Generated C
 tools/regen.sh
 
 # 4. Native binary
@@ -64,7 +63,7 @@ cmake --build build --target psx-runtime -j8
 
 # 5. Run (headless + debug server)
 PSX_DEBUG_SERVER=1 ./build/psx_runtime --game game.toml \
-    --disc "disc/Tales of Destiny (Japan).cue" --headless --debug-port 4370
+    --disc "/path/to/Tales of Destiny (USA).cue" --headless --debug-port 4370
 ```
 
 Set `PSX_RECOMP_UI=OFF` until a launcher UI is wired; the runtime needs SDL3 3.4+.
@@ -94,6 +93,13 @@ No window, no GPU. The runtime exposes a JSON-over-TCP debug server on `127.0.0.
 
 A milestone is done when a screenshot and the guest registers say so — not when it
 compiles.
+
+## Why the North American release
+
+This project started on the Japanese release (`SLPS-01100`); that work is in the git
+history. It moved to the North American one because the goal is a Spanish translation:
+its text engine already handles the Latin alphabet. The two are the same engine: same
+load address, and both builds interpret 9 instructions in three runtime-patched blocks.
 
 ## Goals
 

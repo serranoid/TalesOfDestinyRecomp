@@ -1,6 +1,6 @@
 # --- datos del juego: nunca entran al repo ---
 disc/
-disc-jp/
+disc-*/
 *.bin
 *.cue
 *.7z

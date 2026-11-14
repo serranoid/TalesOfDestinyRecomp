@@ -13,9 +13,9 @@ or a comment. That means:
 - no memory dumps. `psx_last_run_report.json` contains a `ram_peeks` section with raw
   guest memory: **remove it** before attaching the report anywhere.
 
-Screenshots that show a milestone are fine. You need your own copy of the Japanese
-release (`SLPS-01100`); the data track this project is measured against has
-`sha1 eb1c41fcb44e5fbc85da7d92f1e2889b69f299f5`. A different dump or region may work,
+Screenshots that show a milestone are fine. You need your own copy of the North American
+release (`SLUS-00626`); the data track this project is measured against has
+`sha1 d0d6d150b3b8abb53e0380cb328fbabef4d19c28`. A different dump or region may work,
 but say so in your report, because addresses can differ.
 
 ## Where help is wanted
@@ -26,7 +26,7 @@ The current list lives in `help` in [`.recomp.json`](.recomp.json). Today:
 - **Audio**: `audio_stats` shows the sound chip producing output through the opening,
   but nobody has listened to it or compared it with the original. A capture with
   `audio_wav` checked against a reference would be a contribution in itself.
-- **Full-motion video**: unverified.
+- **Full-motion video**: the opening movie decodes; nothing else has been checked.
 - **The two minigame overlays**: code loaded from disc at run time, not recompiled yet.
 - **Other hosts**: only Linux x86-64 (GCC 16, CMake, Ninja, SDL3 3.4+) has been built
   and run. Reports from other compilers and systems are useful even when they fail.
@@ -52,7 +52,7 @@ after your change; when you reach a new screen, add a step and its reference
 screenshot:
 
 ```sh
-python3 tools/replay.py --disc "/path/to/Tales of Destiny (Japan).cue"
+python3 tools/replay.py --disc "/path/to/Tales of Destiny (USA).cue"
 ```
 
 `buttons` is the raw active-low pad word: `Start` = `0xFFF7`, `○` (confirm) = `0xDFFF`,

@@ -2,8 +2,8 @@
   "format_version": 1,
   "game": {
     "name": "Tales of Destiny",
-    "id": "SLPS-01100",
-    "boot_exe": "SLPS_011.00"
+    "id": "SLUS-00626",
+    "boot_exe": "SLUS_006.26"
   },
   "marketing": {
     "description": "",
@@ -13,28 +13,28 @@
     "players": 2
   },
   "rom_identity": {
-    "cue_name": "Tales of Destiny (Japan).cue",
-    "bin_name": "Tales of Destiny (Japan) (Track 1).bin",
+    "cue_name": "Tales of Destiny (USA).cue",
+    "bin_name": "Tales of Destiny (USA) (Track 1).bin",
     "track_counts": [
       2
     ],
     "require_cue": true,
     "data_track": {
-      "size": 518719488,
-      "md5": "816721cd3224c98f89306b06c06c846c",
-      "sha1": "eb1c41fcb44e5fbc85da7d92f1e2889b69f299f5",
-      "crc32": "2e8deca1"
+      "size": 557790912,
+      "md5": "21ca0eb29b32856d334a7cedbf5cc314",
+      "sha1": "d0d6d150b3b8abb53e0380cb328fbabef4d19c28",
+      "crc32": "bb5864ba"
     },
-    "disc_fp": "5f4679bf228ade81b0ead45e884c531152e832250896b844d25dde90ebb43684"
+    "disc_fp": "529d40add9fce9d4b025ffb1a551b861e17fa288c2283ba14a3bdb4c68f1d812"
   },
   "exe": {
     "load_address": "0x800A0000",
-    "entry_pc": "0x80151010",
-    "text_size": "0x00119800",
+    "entry_pc": "0x8014E8B4",
+    "text_size": "0x00114800",
     "stack_base": "0x801FFFF0"
   },
   "seeds": {
-    "count": 1568,
+    "count": 1542,
     "source": "boot_exe_jal"
   },
   "warnings": [],
