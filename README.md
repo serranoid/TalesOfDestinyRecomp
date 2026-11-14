@@ -2,8 +2,10 @@
 
 A **static recompilation of *Tales of Destiny*** (PlayStation, Japan, `SLPS-01100`, 1997)
 built on [psxrecomp](https://github.com/RetroPortingToolKit/psxrecomp). The game's MIPS
-R3000A code is translated to C ahead of time and compiled into a native executable —
-**no emulator, no interpreter for the game's own code**.
+R3000A code is translated to C ahead of time and compiled into a native executable.
+The framework keeps an interpreter for code that changes at run time; measured from
+boot to the name entry screen, it ran **9 instructions of game code** (three small
+blocks the game patches in memory). Everything else ran recompiled.
 
 Nothing from the game is distributed here. You need your own disc.
 
@@ -82,10 +84,16 @@ No window, no GPU. The runtime exposes a JSON-over-TCP debug server on `127.0.0.
 A milestone is done when a screenshot and the guest registers say so — not when it
 compiles.
 
+## Goals
+
+Run as well as possible on Linux, ultrawide, mods, and a Spanish translation — after
+the original game is playable. See [ROADMAP.md](ROADMAP.md).
+
 ## Help wanted
 
-See `help` in [`.recomp.json`](.recomp.json). Short version: audio, FMV, and the two
-overlays.
+See `help` in [`.recomp.json`](.recomp.json). Short version: getting past the
+name entry screen, audio, FMV, and the two overlays. [CONTRIBUTING.md](CONTRIBUTING.md)
+explains how changes are verified and what must never be uploaded.
 
 ## Legal
 
